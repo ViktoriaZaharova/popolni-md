@@ -3,28 +3,202 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+@media only screen and (max-width : 1400px)
+  main
+    background-position: center 300px
 
+  .label-message
+    max-width: 500px
+
+  .options-operator-box
+    max-width: 380px
+
+
+@media only screen and (max-width : 1200px)
+  .label-message
+    max-width: 400px
+
+  .form
+    padding: 18px 24px
+    .form-group
+      max-width: 300px
+
+  .options-operator
+    flex-direction: column
+    align-items: flex-start
+
+  .form-options
+    padding: 0
+    width: 100%
+
+  .options-operator-box
+    max-width: 49%
+
+  .col
+    flex-direction: row
+    justify-content: space-between
+    max-width: none
+    width: 100%
+    .options-operator-box
+      &:last-child
+        margin: 0 0 16px
+
+  main
+    background-position: center 600px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+  .label-message
+    max-width: 280px
+
+  .form
+    .form-group
+      max-width: 220px
+
+  .options-operator-box
+    padding: 34px 24px
+    h3
+      font-size: 20px
+
+  main
+    background-position: center 700px
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+  header .logo
+    margin: 0 20px 0 0
 
+  .menu li
+    margin: 0 10px 0 0
+
+  .form
+    .form-group
+      max-width: none
+      margin: 0 0 20px
+    .btn
+      margin: 20px auto 0
+
+  .label-message
+    max-width: none
+
+  footer .logo
+    margin: 0 20px 0 0
+
+  .tabs__content
+    width: 100%
+    padding: 20px
+
+  .tabs__caption
+    width: 100%
+    height: auto
+    flex-direction: row
+    align-items: stretch
+    border: none
+      bottom: 1px solid #CFE2F5
+    li
+      width: 33.3%
+      height: 65px
+      &:before
+        transform: rotate(90deg)
+        bottom: -19px
+        right: 50%
+
+  .tabs-box
+    transform: none
+
+  main
+    background-position: center 800px
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width : 575px)
+  header
+    .logo
+      width: 100%
+      margin: 0 auto 10px
+      justify-content: center
+
+  main
+    padding: 40px 0
+
+  .footer-line
+    flex-direction: column
+    align-items: center
+
+  footer
+    .logo
+      margin: 0 auto 10px
+
+  .list-social
+    margin: 10px auto 0
+    justify-content: center
+
+  .col
+    flex-direction: column
+    align-items: center
+
+  .options-operator-box
+    max-width: none
+    margin: 0 0 16px
+
+  .tabs-box
+    font-size: 14px
+
+  main
+    background: transparent
+
+  .modal-decor
+    width: 100px
+    height: 100px
+
+  .card-box .form-group label
+    max-width: 74px
+
+  .card-box
+    padding: 30px 20px
+    .form-group input
+      font-size: 14px
+
+
+
+
 @media only screen and (max-width : 480px)
-	/**/
+  .modal__wrapper
+    padding: 30px
+
+  .card-box .form-group label
+    margin: 0 0 5px
+
+  .number-card-date
+    max-width: 160px
 
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
+@media only screen and (max-width : 420px)
+  .menu
+    width: 100%
+    margin: 0 auto 10px
+    justify-content: space-between
+    li
+      margin: 0
+
+  .links-call
+    margin: 0 auto
+
+  .banner
+    padding: 20px
+
+  h1
+    font-size: 26px
+
+  .card-box .form-group label
+    max-width: 64px
+
+  .number-card-date
+    max-width: 140px
+
+  .number-card-cvv
+    max-width: 64px
 
 
 /*==========  Mobile First  ==========*/
