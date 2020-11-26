@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var overlay = $('.overlay');
     var open_modal = $('.open_modal');
-    var close = $('.modal__close, .overlay');
+    var close = $('.modal__close, .overlay, .btn-close-modal');
     var modal = $('.modal__div');
 
     open_modal.click(function (event) {

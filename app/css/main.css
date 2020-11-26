@@ -885,21 +885,21 @@ button {
           box-sizing: border-box;
   position: relative;
   border-radius: 20px; }
-  .modal__wrapper:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 162px;
-    height: 161px;
-    background: url("../img/credit-card.svg") no-repeat center;
-      background-size: 100%; }
   .modal__wrapper h2 {
     text-align: center;
     width: 100%;
     color: #2F3655;
     font-size: 28px;
     font-weight: bold; }
+
+.modal-decor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 162px;
+  height: 161px;
+  background: url("../img/credit-card.svg") no-repeat center;
+    background-size: 100%; }
 
 .name-card {
   width: 100%;
@@ -1097,6 +1097,29 @@ button {
   left: 0;
   cursor: pointer;
   display: none; }
+
+.modal-success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .modal-success h3 {
+    text-align: center;
+    margin: 16px auto 30px;
+    color: #2F3655;
+    font-size: 20px;
+    font-weight: 600; }
+  .modal-success .btn {
+    margin: 33px auto 0;
+    max-width: 194px;
+    width: 100%;
+    height: 60px; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */

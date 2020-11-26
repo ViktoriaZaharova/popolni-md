@@ -660,21 +660,22 @@ button
   box-sizing: border-box
   position: relative
   border-radius: 20px
-  &:before
-    content: ''
-    position: absolute
-    left: 0
-    top: 0
-    width: 162px
-    height: 161px
-    background: url("../img/credit-card.svg") no-repeat center
-      size: 100%
+
   h2
     text-align: center
     width: 100%
     color: #2F3655
     font-size: 28px
     font-weight: bold
+
+.modal-decor
+  position: absolute
+  left: 0
+  top: 0
+  width: 162px
+  height: 161px
+  background: url("../img/credit-card.svg") no-repeat center
+    size: 100%
 
 .name-card
   width: 100%
@@ -831,6 +832,22 @@ button
   left: 0
   cursor: pointer
   display: none
+
+.modal-success
+  display: flex
+  flex-direction: column
+  align-items: center
+  h3
+    text-align: center
+    margin: 16px auto 30px
+    color: #2F3655
+    font-size: 20px
+    font-weight: 600
+  .btn
+    margin: 33px auto 0
+    max-width: 194px
+    width: 100%
+    height: 60px
 
 @import "media"
 // Всегда в конце
