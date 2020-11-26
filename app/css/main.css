@@ -302,7 +302,9 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg); }
+          transform: rotate(-90deg);
+  position: relative;
+  z-index: 1; }
 
 .tabs__caption {
   position: relative;
@@ -338,7 +340,30 @@ h1 {
             justify-content: center;
     width: 77px;
     position: relative;
-    cursor: pointer; }
+    cursor: pointer;
+    overflow: hidden; }
+    .tabs__caption li:after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      right: -60px;
+      bottom: -60px;
+      -webkit-transition: 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
+      -webkit-transform: translate(-50%, -50%) scale(1);
+              transform: translate(-50%, -50%) scale(1); }
+    .tabs__caption li:hover {
+      color: #fff;
+      -webkit-transition-delay: .2s;
+              transition-delay: .2s; }
+      .tabs__caption li:hover:after {
+        -webkit-transform: scale(20.3);
+                transform: scale(20.3);
+        background: #4B5CDA; }
+      .tabs__caption li:hover .tabs-box {
+        color: #fff; }
     .tabs__caption li:before {
       content: '';
       position: absolute;
@@ -442,10 +467,37 @@ h1 {
       padding: 7px 10px;
       overflow: hidden; }
       .list-operator li a img {
-        max-height: 100%; }
+        max-height: 100%;
+        position: relative;
+        z-index: 1; }
       .list-operator li a:hover {
         -webkit-box-shadow: 0px 10px 44px -12px rgba(75, 92, 218, 0.35);
                 box-shadow: 0px 10px 44px -12px rgba(75, 92, 218, 0.35); }
+      .list-operator li a:after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        right: -40px;
+        bottom: -40px;
+        -webkit-transition: 0.6s ease-in-out;
+        transition: 0.6s ease-in-out;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1); }
+      .list-operator li a:hover {
+        color: #fff;
+        -webkit-transition-delay: .7s;
+                transition-delay: .7s; }
+        .list-operator li a:hover:after {
+          -webkit-transform: scale(20.3);
+                  transform: scale(20.3);
+          background: #4B5CDA; }
+        .list-operator li a:hover .tabs-box {
+          color: #fff; }
+        .list-operator li a:hover img {
+          -webkit-filter: brightness(0) invert(1);
+                  filter: brightness(0) invert(1); }
 
 .options-operator {
   width: 100%;
