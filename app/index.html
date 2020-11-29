@@ -18,30 +18,45 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
     <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
 
+<div class="mobile-menu">
+    <div class="btn-close"><img src="img/close.svg" alt=""></div>
+
+    <ul class="menu">
+        <li><a href="#">О проекте </a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#" class="active">FAQ</a></li>
+    </ul>
+</div>
+
 <header>
     <div class="container">
         <a href="index.html" class="logo">
-            <span class="logo-icon"><img src="img/logo.svg" alt=""></span>
-            <span class="logo-text"><span>popolni</span>  md</span>
+            <img src="img/logo.svg" alt="">
         </a>
 
         <ul class="menu">
             <li><a href="#">О проекте </a></li>
-            <li><a href="#" class="active">Контакты</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#" class="active">FAQ</a></li>
         </ul>
 
         <a href="#" class="links-call">
             <span class="links-call__icon"><img src="img/mail.svg" alt=""></span>
             <span class="links-call__text">Обратная связь</span>
         </a>
+
+        <div class="btn-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </header>
 
@@ -53,7 +68,7 @@
         </div>
 
         <div class="tabs">
-            <ul class="tabs__caption wow animate__animated animate__fadeInLeft">
+            <ul class="tabs__caption wow animate__animated animate__fadeInLeft animate__delay-1s">
                 <li>
                     <div class="tabs-box">
                         <div class="country-icon"><img src="img/rus.png" alt=""></div>
@@ -76,15 +91,15 @@
             <div class="tabs__content">
                 <ul class="list-operator">
                     <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/1.png" alt=""></a></li>
-                    <li class="wow animate__animated animate__fadeInLeft animate__delay-2s"><a href="#"><img src="img/2.png" alt=""></a></li>
-                    <li class="wow animate__animated animate__fadeInLeft animate__delay-3s"><a href="#"><img src="img/3.png" alt=""></a></li>
-                    <li class="wow animate__animated animate__fadeInLeft animate__delay-4s"><a href="#"><img src="img/4.png" alt=""></a></li>
-                    <li class="wow animate__animated animate__fadeInLeft animate__delay-5s"><a href="#"><img src="img/5.png" alt=""></a></li>
+                    <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/2.png" alt=""></a></li>
+                    <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/3.png" alt=""></a></li>
+                    <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/4.png" alt=""></a></li>
+                    <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/5.png" alt=""></a></li>
                 </ul>
 
                 <div class="options-operator">
                     <div class="col">
-                        <div class="options-operator-box wow animate__animated animate__fadeInUp">
+                        <div class="options-operator-box wow animate__animated animate__fadeInUp animate__delay-1s">
                             <h4>Узнать баланс
                                 вы можете на сайте
                             </h4>
@@ -111,7 +126,7 @@
                                 оператора <a href="#" class="color-blue">“Интертелеком”</a></h3>
                             <label>
                                 <span class="input-icon"><img src="img/phone2.svg" alt=""></span>
-                                <input type="text" value="0 657 79 645" name="phone">
+                                <input type="text" value="0 657 79 645" name="phone" class="valid">
                             </label>
                             <label>
                                 <span class="input-icon"><img src="img/currency.svg" alt=""></span>
@@ -119,7 +134,7 @@
                             </label>
                         </div>
 
-                        <div class="options-operator-box options-operator-box__total wow animate__animated animate__fadeInRight animate__delay-2s">
+                        <div class="options-operator-box options-operator-box__total wow animate__animated animate__fadeInRight animate__delay-1s">
                             <ul class="total-item">
                                 <li>
                                     <span>К оплате:</span>
@@ -134,7 +149,12 @@
                                     <strong class="color-blue">102,01 руб.</strong>
                                 </li>
                             </ul>
-                            <a href="#modal1" class="btn btn-red open_modal"><span>ОПЛАТИТЬ КАРТОЙ “РАДУГА”</span></a>
+                            <div class="button_su btn-red">
+                                <span class="su_button_circle"></span>
+                                <a href="#modal1" class="button_su_inner open_modal">
+                                    <span class="button_text_container">ОПЛАТИТЬ КАРТОЙ “РАДУГА”</span>
+                                </a>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -142,15 +162,15 @@
             <div class="tabs__content active">
                 <ul class="list-operator">
                     <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/1.png" alt=""></a></li>
-                    <li class="wow animate__animated animate__fadeInLeft animate__delay-2s"><a href="#"><img src="img/2.png" alt=""></a></li>
-                    <li class="wow animate__animated animate__fadeInLeft animate__delay-3s"><a href="#"><img src="img/3.png" alt=""></a></li>
-                    <li class="wow animate__animated animate__fadeInLeft animate__delay-4s"><a href="#"><img src="img/4.png" alt=""></a></li>
-                    <li class="wow animate__animated animate__fadeInLeft animate__delay-5s"><a href="#"><img src="img/5.png" alt=""></a></li>
+                    <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/2.png" alt=""></a></li>
+                    <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/3.png" alt=""></a></li>
+                    <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/4.png" alt=""></a></li>
+                    <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/5.png" alt=""></a></li>
                 </ul>
 
                 <div class="options-operator">
                     <div class="col">
-                        <div class="options-operator-box wow animate__animated animate__fadeInUp">
+                        <div class="options-operator-box wow animate__animated animate__fadeInUp animate__delay-1s">
                             <h4>Узнать баланс
                                 вы можете на сайте
                             </h4>
@@ -177,7 +197,7 @@
                                 оператора <a href="#" class="color-blue">“Интертелеком”</a></h3>
                             <label>
                                 <span class="input-icon"><img src="img/phone2.svg" alt=""></span>
-                                <input type="text" value="0 657 79 645" name="phone">
+                                <input type="text" value="0 657 79 645" name="phone" class="valid">
                             </label>
                             <label>
                                 <span class="input-icon"><img src="img/currency.svg" alt=""></span>
@@ -185,7 +205,7 @@
                             </label>
                         </div>
 
-                        <div class="options-operator-box options-operator-box__total wow animate__animated animate__fadeInRight animate__delay-2s">
+                        <div class="options-operator-box options-operator-box__total wow animate__animated animate__fadeInRight animate__delay-1s">
                             <ul class="total-item">
                                 <li>
                                     <span>К оплате:</span>
@@ -200,7 +220,12 @@
                                     <strong class="color-blue">102,01 руб.</strong>
                                 </li>
                             </ul>
-                            <a href="#modal1" class="btn btn-red open_modal"><span>ОПЛАТИТЬ КАРТОЙ “РАДУГА”</span></a>
+                            <div class="button_su btn-red">
+                                <span class="su_button_circle"></span>
+                                <a href="#modal1" class="button_su_inner open_modal">
+                                    <span class="button_text_container">ОПЛАТИТЬ КАРТОЙ “РАДУГА”</span>
+                                </a>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -209,15 +234,15 @@
             <div class="tabs__content">
                 <ul class="list-operator">
                     <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/1.png" alt=""></a></li>
-                    <li class="wow animate__animated animate__fadeInLeft animate__delay-2s"><a href="#"><img src="img/2.png" alt=""></a></li>
-                    <li class="wow animate__animated animate__fadeInLeft animate__delay-3s"><a href="#"><img src="img/3.png" alt=""></a></li>
-                    <li class="wow animate__animated animate__fadeInLeft animate__delay-4s"><a href="#"><img src="img/4.png" alt=""></a></li>
-                    <li class="wow animate__animated animate__fadeInLeft animate__delay-5s"><a href="#"><img src="img/5.png" alt=""></a></li>
+                    <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/2.png" alt=""></a></li>
+                    <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/3.png" alt=""></a></li>
+                    <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/4.png" alt=""></a></li>
+                    <li class="wow animate__animated animate__fadeInLeft animate__delay-1s"><a href="#"><img src="img/5.png" alt=""></a></li>
                 </ul>
 
                 <div class="options-operator">
                     <div class="col">
-                        <div class="options-operator-box wow animate__animated animate__fadeInUp">
+                        <div class="options-operator-box wow animate__animated animate__fadeInUp animate__delay-1s">
                             <h4>Узнать баланс
                                 вы можете на сайте
                             </h4>
@@ -244,7 +269,7 @@
                                 оператора <a href="#" class="color-blue">“Интертелеком”</a></h3>
                             <label>
                                 <span class="input-icon"><img src="img/phone2.svg" alt=""></span>
-                                <input type="text" value="0 657 79 645" name="phone">
+                                <input type="text" value="0 657 79 645" name="phone" class="valid">
                             </label>
                             <label>
                                 <span class="input-icon"><img src="img/currency.svg" alt=""></span>
@@ -252,7 +277,7 @@
                             </label>
                         </div>
 
-                        <div class="options-operator-box options-operator-box__total wow animate__animated animate__fadeInRight animate__delay-2s">
+                        <div class="options-operator-box options-operator-box__total wow animate__animated animate__fadeInRight animate__delay-1s">
                             <ul class="total-item">
                                 <li>
                                     <span>К оплате:</span>
@@ -267,7 +292,12 @@
                                     <strong class="color-blue">102,01 руб.</strong>
                                 </li>
                             </ul>
-                            <a href="#modal1" class="btn btn-red open_modal"><span>ОПЛАТИТЬ КАРТОЙ “РАДУГА”</span></a>
+                            <div class="button_su btn-red">
+                                <span class="su_button_circle"></span>
+                                <a href="#modal1" class="button_su_inner open_modal">
+                                    <span class="button_text_container">ОПЛАТИТЬ КАРТОЙ “РАДУГА”</span>
+                                </a>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -281,8 +311,7 @@
 
         <div class="footer-line">
             <a href="index.html" class="logo">
-                <span class="logo-icon"><img src="img/logo.svg" alt=""></span>
-                <span class="logo-text"><span>popolni</span>  md</span>
+                <img src="img/logo2.svg" alt="">
             </a>
 
             <ul class="menu">
@@ -316,9 +345,12 @@
                     <textarea name="message" placeholder="Опишите вашу проблему"></textarea>
                 </label>
 
-                <button class="btn btn-blue" type="submit">
-                    <span>Отправить</span>
-                </button>
+                <div class="button_su btn-blue">
+                    <span class="su_button_circle"></span>
+                    <button type="submit" class="button_su_inner">
+                      <span class="button_text_container">Отправить</span>
+                    </button>
+                </div>
             </div>
         </form>
     </div>
@@ -327,6 +359,7 @@
 <div class="modal__div" id="modal1">
     <div class="modal__wrapper">
         <div class="modal-decor"><img src="img/credit-card.svg" alt=""></div>
+
         <div class="modal__close"><img src="img/close.svg" alt=""></div>
 
         <h2>Оплата картой</h2>
@@ -372,6 +405,13 @@
 
 
             <button type="submit" class="btn-red btn"><span>ОПЛАТИТЬ </span></button>
+
+            <div class="button_su btn-red">
+                <span class="su_button_circle"></span>
+                <button type="submit" class="button_su_inner">
+                    <span class="button_text_container">ОПЛАТИТЬ</span>
+                </button>
+            </div>
         </form>
     </div>
 </div>
@@ -391,7 +431,13 @@
 </div>
 <div class="overlay"></div><!-- Пoдлoжкa -->
 
-<a href="#modal2" class="btn btn-red open_modal"><span>Окно спасибо</span></a>
+<div class="button_su btn-red">
+    <span class="su_button_circle"></span>
+    <a href="#modal2" type="submit" class="button_su_inner open_modal">
+        <span class="button_text_container">Окно спасибо</span>
+    </a>
+</div>
+
 
 <script src="js/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>

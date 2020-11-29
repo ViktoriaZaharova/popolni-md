@@ -104,25 +104,7 @@ a
 .logo
   display: flex
   align-items: flex-start
-  color: #081714
-  font-size: 20px
-  font-family: $font
 
-.logo-text
-  display: flex
-  align-items: center
-  margin: 0 0 0 6.5px
-  span
-    display: flex
-    align-items: center
-    &:after
-      content: ''
-      display: inline-block
-      border-radius: 50%
-      background: #081714
-      height: 3px
-      width: 3px
-      margin: 0 3px
 
 //header
 header
@@ -149,19 +131,19 @@ header
       padding: 0 0 5px
       &:hover
         color: #4B5CDA
+        &:before
+          content: ''
+          position: absolute
+          left: 50%
+          bottom: -19px
+          width: 6px
+          height: 29px
+          background: url("../img/figure.svg") no-repeat center
+            size: contain
+          transform: rotate(90deg) translate(-50%,0)
     .active
       color: #4B5CDA
 
-      &:before
-        content: ''
-        position: absolute
-        left: 50%
-        bottom: -19px
-        width: 6px
-        height: 29px
-        background: url("../img/figure.svg") no-repeat center
-          size: contain
-        transform: rotate(90deg) translate(-50%,0)
 
 .links-call
   display: flex
@@ -177,10 +159,10 @@ header
 
 //main
 main
-  padding: 92px 0 52px
+  padding: 39px 0 52px
   position: relative
   overflow: hidden
-  background: url("../img/bg2.svg") no-repeat center 252px
+  background: url("../img/bg2.svg") no-repeat center bottom
     size: 100%
 
 
@@ -254,24 +236,24 @@ h1
     position: relative
     cursor: pointer
     overflow: hidden
-    &:after
-      content: ''
-      position: absolute
-      border-radius: 50%
-      width: 40px
-      height: 40px
-      right: -60px
-      bottom: -60px
-      transition: 0.2s ease-in-out
-      transform: translate(-50%, -50%) scale(1)
+    //&:after
+    //  content: ''
+    //  position: absolute
+    //  border-radius: 50%
+    //  width: 40px
+    //  height: 40px
+    //  right: -60px
+    //  bottom: -60px
+    //  transition: 0.2s ease-in-out
+    //  transform: translate(-50%, -50%) scale(1)
     &:hover
       color: #fff
       transition-delay: .2s
-      &:after
-        transform: scale(20.3)
-        background: #4B5CDA
-      .tabs-box
-        color: #fff
+      //&:after
+      //  transform: scale(20.3)
+      //  background: #4B5CDA
+      //.tabs-box
+      //  color: #fff
 
 
     &:before
@@ -336,8 +318,16 @@ h1
   flex-wrap: wrap
   li
     margin: 0 12px 28px 0
+    --animate-delay: 1.5s
+    &:nth-child(2)
+      --animate-delay: 2s
+    &:nth-child(3)
+      --animate-delay: 2.5s
+    &:nth-child(4)
+      --animate-delay: 3s
     &:last-child
       margin-right: 0
+      --animate-delay: 3.5s
     a
       background: rgba(255, 255, 255, 0.4)
       width: 146px
@@ -355,26 +345,7 @@ h1
         z-index: 1
       &:hover
         box-shadow: 0px 10px 44px -12px rgba(75, 92, 218, 0.35)
-      &:after
-        content: ''
-        position: absolute
-        border-radius: 50%
-        width: 20px
-        height: 20px
-        right: -40px
-        bottom: -40px
-        transition: 0.6s ease-in-out
-        transform: translate(-50%, -50%) scale(1)
-      &:hover
-        color: #fff
-        transition-delay: .7s
-        &:after
-          transform: scale(20.3)
-          background: #4B5CDA
-        .tabs-box
-          color: #fff
-        img
-          filter: brightness(0) invert(1)
+
 
 .options-operator
   width: 100%
@@ -437,8 +408,10 @@ h1
     min-height: 172px
     margin: 0 0 16px
     padding: 33px 30px
+    --animate-delay: 4.5s
     &:last-child
       margin: 0
+      --animate-delay: 5.5s
 
 .form-options
   display: flex
@@ -458,16 +431,24 @@ h1
       color: #838FAD
       font-size: 14px
       font-weight: 500
+
   label
     max-width: none
     width: 100%
     margin: 0 0 22px
     &:last-child
       margin: 0
-  .btn
+  .button_su
     max-width: 285px
     width: 100%
     margin: 30px 0 0
+  .valid
+    background: #DCE0FF
+  .options-operator-box
+    --animate-delay: 6.5s
+    &:last-child
+      --animate-delay: 7.5s
+
 
 .options-operator-box__total
   overflow: hidden
@@ -505,12 +486,7 @@ footer
   padding: 25px 0 20px
   color: #fff
   .logo
-    color: #fff
     margin: 0 63px 0 0
-  .logo-text
-    span
-      &:after
-        background: #fff
   .container
     max-width: 1345px
   .menu
@@ -585,14 +561,19 @@ textarea
   display: flex
   flex-wrap: wrap
   padding: 16px 24px 18px 34px
-  background: url("../img/form-bg.svg") no-repeat center
+  background: url("../img/form-bg.svg"), rgba(255, 255, 255, 0.05) no-repeat center
     size: cover
   h3
     width: 100%
     margin: 0 0 20px
-  button
+  //button
+  //  max-width: 178px
+  //  width: 100%
+  //  background: transparent
+  .button_su
     max-width: 178px
     width: 100%
+
 
 
 .list-social
@@ -613,6 +594,8 @@ textarea
       background: #202E2B
       width: 42px
       height: 42px
+      &:hover
+        background: linear-gradient(0deg, #FC1414, #FC1414), rgba(255, 255, 255, 0.7)
 
 button
   outline: none
@@ -621,6 +604,7 @@ button
   border: none
     radius: 30px
   cursor: pointer
+  font-family: $default-font
 
 .btn
   display: flex
@@ -630,43 +614,119 @@ button
   height: 51px
   overflow: hidden
   border-radius: 30px
-  transition: 1s ease-out
-  span
-    position: relative
-    z-index: 1
-  &:after
-    content: ''
-    position: absolute
-    border-radius: 50%
-    width: 40px
-    height: 40px
-    right: -60px
-    bottom: -60px
-    transition: 0.6s ease-in-out
-    transform: translate(-50%, -50%) scale(1)
-  &:hover
-    transition-delay: .7s
-    &:after
-      transform: scale(20.3)
+  //&:after
+  //  content: ''
+  //  position: absolute
+  //  border-radius: 50%
+  //  width: 40px
+  //  height: 40px
+  //  right: -60px
+  //  bottom: -60px
+  //  transition: 0.6s ease-in-out
+  //  transform: translate(-50%, -50%) scale(1)
+  //&:hover
+  //  transition-delay: .7s
+  //  &:after
+  //    transform: scale(20.3)
 
 .btn-blue
   color: #fff
   box-shadow: 0 10px 44px -12px #000000
   background: #4B5CDA
   font-size: 14px
-  font-weight: 600
-  &:after
-    background: linear-gradient(0deg, #FC1414, #FC1414), rgba(255, 255, 255, 0.7)
+  .button_su_inner
+    background: #4B5CDA
 
 .btn-red
   background: linear-gradient(0deg, #FC1414, #FC1414), rgba(255, 255, 255, 0.7)
-  box-shadow: 0 10px 44px -12px #6962A8
+  box-shadow: 0 10px 44px -12px #FF5A61
   color: #fff
   text-transform: uppercase
   font-size: 14px
   font-weight: 600
-  &:after
-    background: #4B5CDA
+  //&:after
+  //  background: #4B5CDA
+
+.button_su
+  overflow: hidden
+  position: relative
+  display: inline-block
+  border-radius: 30px
+  height: 51px
+  .button_su_inner
+    font-size: 14px
+    font-weight: 600
+
+.su_button_circle
+  background-color: red
+  border-radius: 1000px
+  position: absolute
+  left: 0
+  top: 0
+  width: 0
+  height: 0
+  margin-left: 0
+  margin-top: 0
+  pointer-events: none
+
+/*animation-timing-function: ease-in-out;
+
+
+.button_su_inner
+  background: linear-gradient(0deg, #FC1414, #FC1414), rgba(255, 255, 255, 0.7)
+  //display: inline-block
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #fff
+  width: 100%
+  text-align: center
+  border-radius: 3px
+  transition: 400ms
+  text-decoration: none
+  z-index: 10
+  height: 100%
+
+.button_text_container
+  position: relative
+  z-index: 10
+
+.explode-circle
+  animation: explode 0.5s forwards
+
+.desplode-circle
+  animation: desplode 0.5s forwards
+
+@keyframes explode
+  0%
+    width: 0
+    height: 0
+    margin-left: 0
+    margin-top: 0
+    background-color: rgba(42, 53, 80, 0.2)
+
+  100%
+    width: 600px
+    height: 600px
+    margin-left: -300px
+    margin-top: -300px
+    background-color: rgba(#2F3655, 0.8)
+
+@keyframes desplode
+  0%
+    width: 600px
+    height: 600px
+    margin-left: -200px
+    margin-top: -200px
+    background-color: rgba(#2F3655, 0.8)
+
+
+  100%
+    width: 0
+    height: 0
+    margin-left: 0
+    margin-top: 0
+    background-color: rgba(129, 80, 108, 0.6)
 
 
 //modal
@@ -719,8 +779,6 @@ button
   top: 0
   width: 162px
   height: 161px
-  background: url("../img/credit-card.svg") no-repeat center
-    size: 100%
 
 .name-card
   position: relative
@@ -895,6 +953,12 @@ button
     max-width: 194px
     width: 100%
     height: 60px
+
+.mobile-menu
+  display: none
+
+.btn-close-modal
+  box-shadow: 0px 10px 44px -12px rgba(75, 92, 218, 0.35)
 
 @import "media"
 // Всегда в конце
