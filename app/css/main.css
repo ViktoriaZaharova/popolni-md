@@ -767,8 +767,9 @@ textarea {
       width: 42px;
       height: 42px; }
       .list-social li a:hover {
-        background: -webkit-gradient(linear, left bottom, left top, from(#FC1414), to(#FC1414)), rgba(255, 255, 255, 0.7);
-        background: linear-gradient(0deg, #FC1414, #FC1414), rgba(255, 255, 255, 0.7); }
+        background: #394A47;
+        -webkit-box-shadow: 0px 22px 44px -12px #000000;
+                box-shadow: 0px 22px 44px -12px #000000; }
 
 button {
   outline: none;
@@ -1208,7 +1209,65 @@ button {
     height: 60px; }
 
 .mobile-menu {
-  display: none; }
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 8;
+  max-width: 280px;
+  width: 100%;
+  background: #E5E5E5;
+  padding: 30px 20px;
+  height: 100%;
+  overflow-y: auto; }
+  .mobile-menu .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .mobile-menu .menu li {
+      margin: 0 0 10px; }
+  .mobile-menu .links-call {
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+.btn-close {
+  margin: 0 0 20px auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 16px; }
+
+.btn-burger {
+  width: 20px;
+  height: 14px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 0 auto; }
+  .btn-burger span {
+    background: #2F3655;
+    height: 2px;
+    width: 100%;
+    display: block; }
 
 .btn-close-modal {
   -webkit-box-shadow: 0px 10px 44px -12px rgba(75, 92, 218, 0.35);
@@ -1275,7 +1334,7 @@ button {
   .form .form-group {
     max-width: none;
     margin: 0 0 20px; }
-  .form .btn {
+  .form .button_su {
     margin: 20px auto 0; }
   .label-message {
     max-width: none; }
@@ -1310,12 +1369,12 @@ button {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 575px) {
-  header .logo {
-    width: 100%;
-    margin: 0 auto 10px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+  header .menu, header .links-call {
+    display: none; }
+  .btn-burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   main {
     padding: 40px 0; }
   .footer-line {

@@ -62,3 +62,11 @@ $( ".button_su_inner" ).mouseleave(function(e) {
     $(this).prev(".su_button_circle").addClass("desplode-circle");
 
 });
+
+$('.btn-burger').click(function () {
+    $('.mobile-menu').fadeToggle();
+});
+
+$('.btn-close').click(function () {
+    $('.mobile-menu').fadeOut();
+});

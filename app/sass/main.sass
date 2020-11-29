@@ -595,7 +595,8 @@ textarea
       width: 42px
       height: 42px
       &:hover
-        background: linear-gradient(0deg, #FC1414, #FC1414), rgba(255, 255, 255, 0.7)
+        background: #394A47
+        box-shadow: 0px 22px 44px -12px #000000
 
 button
   outline: none
@@ -956,6 +957,44 @@ button
 
 .mobile-menu
   display: none
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 8
+  max-width: 280px
+  width: 100%
+  background: #E5E5E5
+  padding: 30px 20px
+  height: 100%
+  overflow-y: auto
+  .menu
+    flex-direction: column
+    align-items: center
+    li
+      margin: 0 0 10px
+  .links-call
+    margin: 0 auto
+    justify-content: center
+
+.btn-close
+  margin: 0 0 20px auto
+  justify-content: flex-end
+  align-items: flex-end
+  display: flex
+  width: 16px
+
+.btn-burger
+  width: 20px
+  height: 14px
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  margin: 0 0 0 auto
+  span
+    background: #2F3655
+    height: 2px
+    width: 100%
+    display: block
 
 .btn-close-modal
   box-shadow: 0px 10px 44px -12px rgba(75, 92, 218, 0.35)
