@@ -254,8 +254,6 @@ h1 {
   width: 100%;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -274,8 +272,11 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
   position: relative;
   z-index: 1; }
 
@@ -314,11 +315,11 @@ h1 {
     width: 77px;
     position: relative;
     cursor: pointer;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-transition-delay: .2s;
+            transition-delay: .2s; }
     .tabs__caption li:hover {
-      color: #fff;
-      -webkit-transition-delay: .2s;
-              transition-delay: .2s; }
+      color: #fff; }
     .tabs__caption li:before {
       content: '';
       position: absolute;
@@ -364,7 +365,7 @@ h1 {
   height: 23px;
   min-width: 23px;
   overflow: hidden;
-  margin: 0 11px 0 0;
+  margin: 0 0 11px 0;
   -webkit-transition: .3s ease;
   transition: .3s ease; }
   .country-icon img {
@@ -416,8 +417,6 @@ h1 {
       width: 146px;
       height: 48px;
       border-radius: 30px;
-      -webkit-backdrop-filter: blur(40px);
-              backdrop-filter: blur(40px);
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -452,8 +451,6 @@ h1 {
           justify-content: space-between; }
 
 .options-operator-box {
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
   border-radius: 20px;
   background: rgba(252, 252, 252, 0.6);
   display: -webkit-box;
@@ -670,9 +667,7 @@ input, textarea {
 
 input {
   height: 46px;
-  padding: 0 10px 0 52px;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px); }
+  padding: 0 10px 0 52px; }
 
 label {
   display: block;
@@ -680,9 +675,7 @@ label {
 
 textarea {
   padding: 14px 25px;
-  height: 101px;
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px); }
+  height: 101px; }
 
 .form-wrapper {
   width: 100%;
@@ -1061,8 +1054,6 @@ button {
 
 .card-box {
   width: 100%;
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
   border-radius: 20px;
   background: #fff;
   padding: 23px 32px 58px;
@@ -1078,8 +1069,6 @@ button {
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.8);
-    -webkit-backdrop-filter: blur(15px);
-            backdrop-filter: blur(15px);
     border-radius: 20px; }
   .card-box:after {
     content: '';
@@ -1178,8 +1167,6 @@ button {
   z-index: 100;
   position: fixed;
   background: rgba(72, 76, 91, 0.5);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   width: 100%;
   height: 100%;
   top: 0;
