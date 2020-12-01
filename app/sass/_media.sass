@@ -98,6 +98,19 @@
   .tabs-box
     transform: none
 
+  .tabs__caption
+    li
+      transform: none
+
+  .tabs-box
+    transform: none
+    writing-mode: initial
+
+  .country-icon
+    transform: none
+    margin: 0 10px 0 0
+
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 575px)
   header
@@ -146,7 +159,13 @@
     .form-group input
       font-size: 14px
 
-
+  .list-operator
+    justify-content: space-around
+    li
+      width: 33%
+      margin: 0 0 15px
+      a
+        width: 100%
 
 
 @media only screen and (max-width : 480px)
@@ -186,6 +205,15 @@
 
   .number-card-cvv
     max-width: 64px
+
+  .list-operator
+    justify-content: space-between
+    li
+      width: 49%
+      margin: 0 0 15px
+      a
+        width: 100%
+
 
 
 /*==========  Mobile First  ==========*/

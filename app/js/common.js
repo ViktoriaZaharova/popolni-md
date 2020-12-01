@@ -38,7 +38,7 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
         .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
 });
 
-new WOW().init();
+// new WOW().init();
 
 $( ".button_su_inner" ).mouseenter(function(e) {
     var parentOffset = $(this).offset();
@@ -69,4 +69,9 @@ $('.btn-burger').click(function () {
 
 $('.btn-close').click(function () {
     $('.mobile-menu').fadeOut();
+});
+
+$('.list-operator li a').click(function () {
+    $('.list-operator li a').removeClass('active');
+    $(this).addClass('active');
 });
