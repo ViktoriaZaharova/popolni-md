@@ -238,27 +238,6 @@ h1
     cursor: pointer
     overflow: hidden
     transform: rotate(180deg)
-    transition: .3s ease
-    //&:after
-    //  content: ''
-    //  position: absolute
-    //  border-radius: 50%
-    //  width: 40px
-    //  height: 40px
-    //  right: -60px
-    //  bottom: -60px
-    //  transition: 0.2s ease-in-out
-    //  transform: translate(-50%, -50%) scale(1)
-    &:hover
-      color: #fff
-      //transition-delay: .2s
-      //&:after
-      //  transform: scale(20.3)
-      //  background: #4B5CDA
-      //.tabs-box
-      //  color: #fff
-
-
     &:before
       content: ''
       position: absolute
@@ -691,7 +670,6 @@ button
 
 .button_su_inner
   background: linear-gradient(0deg, #FC1414, #FC1414), rgba(255, 255, 255, 0.7)
-  //display: inline-block
   display: flex
   align-items: center
   justify-content: center
@@ -720,14 +698,14 @@ button
     height: 0
     margin-left: 0
     margin-top: 0
-    background-color: rgba(42, 53, 80, 0.2)
+    background-color: rgba(#CF0000, 0.2)
 
   100%
     width: 600px
     height: 600px
     margin-left: -300px
     margin-top: -300px
-    background-color: rgba(#2F3655, 0.6)
+    background: #CF0000
 
 @keyframes desplode
   0%
@@ -735,7 +713,7 @@ button
     height: 600px
     margin-left: -200px
     margin-top: -200px
-    background-color: rgba(#2F3655, 0.8)
+    background-color: rgba(#CF0000, 0.8)
 
 
   100%
@@ -743,7 +721,70 @@ button
     height: 0
     margin-left: 0
     margin-top: 0
-    background-color: rgba(129, 80, 108, 0.6)
+    background: #CF0000
+
+.su_button_circle2
+  background-color: #4B5CDA
+  border-radius: 1000px
+  position: absolute
+  left: 0
+  top: 0
+  width: 0
+  height: 0
+  margin-left: 0
+  margin-top: 0
+  pointer-events: none
+
+.button_su_inner2
+  background: #4B5CDA
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #fff
+  width: 100%
+  text-align: center
+  border-radius: 3px
+  transition: 400ms
+  text-decoration: none
+  z-index: 10
+  height: 100%
+
+.explode-circle2
+  animation: explode2 0.5s forwards
+
+.desplode-circle2
+  animation: desplode2 0.5s forwards
+
+@keyframes explode2
+  0%
+    width: 0
+    height: 0
+    margin-left: 0
+    margin-top: 0
+    background-color: rgba(#1122A2, 0.2)
+
+  100%
+    width: 600px
+    height: 600px
+    margin-left: -300px
+    margin-top: -300px
+    background: #1122A2
+
+@keyframes desplode2
+  0%
+    width: 600px
+    height: 600px
+    margin-left: -200px
+    margin-top: -200px
+    background-color: rgba(#1122A2, 0.8)
+
+
+  100%
+    width: 0
+    height: 0
+    margin-left: 0
+    margin-top: 0
+    background: #1122A2
 
 
 //modal

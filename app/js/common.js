@@ -60,7 +60,29 @@ $( ".button_su_inner" ).mouseleave(function(e) {
     $(this).prev(".su_button_circle").css({"left": relX, "top": relY });
     $(this).prev(".su_button_circle").removeClass("explode-circle");
     $(this).prev(".su_button_circle").addClass("desplode-circle");
+});
 
+
+$( ".button_su_inner2" ).mouseenter(function(e) {
+    var parentOffset = $(this).offset();
+
+    var relX = e.pageX - parentOffset.left;
+    var relY = e.pageY - parentOffset.top;
+    $(this).prev(".su_button_circle2").css({"left": relX, "top": relY });
+    $(this).prev(".su_button_circle2").removeClass("desplode-circle2");
+    $(this).prev(".su_button_circle2").addClass("explode-circle2");
+
+});
+
+$( ".button_su_inner2" ).mouseleave(function(e) {
+
+    var parentOffset = $(this).offset();
+
+    var relX = e.pageX - parentOffset.left;
+    var relY = e.pageY - parentOffset.top;
+    $(this).prev(".su_button_circle2").css({"left": relX, "top": relY });
+    $(this).prev(".su_button_circle2").removeClass("explode-circle2");
+    $(this).prev(".su_button_circle2").addClass("desplode-circle2");
 });
 
 $('.btn-burger').click(function () {
